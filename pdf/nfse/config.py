@@ -11,6 +11,7 @@ from typing import Union
 class FontType(Enum):
     COURIER = "Courier"
     TIMES = "Times"
+    HELVETICA = "Helvetica"
 
 @dataclass
 class Margins:
@@ -34,6 +35,6 @@ class NfseConfig:
     nfse_logo: Union[str, BytesIO, bytes] = None
     pref_logo: Union[str, BytesIO, bytes] = None
     margins: Margins = field(default_factory=Margins)
-    font_type: FontType = FontType.TIMES
+    font_type: FontType = FontType.HELVETICA
     decimal_config: DecimalConfig = field(default_factory=DecimalConfig)
     receipt_pos: ReceiptPosition = ReceiptPosition.TOP
